@@ -1,18 +1,20 @@
-class ConfedScraper
-  attr_reader :url
+module ConfedScraper
+  class Scraper
+    attr_reader :url
 
-  def initialize(url)
-    @url = url
-  end
+    def initialize(url)
+      @url = url
+    end
 
-  def process(url)
-  end
+    def process(url)
+    end
 
-  def get_content_from(url)
-    RestClient.get(url)
-  end
+    def get_content_from(url)
+      RestClient.get(url)
+    end
 
-  def scrape_message(url)
-    p "Scraping: #{url}"
+    def scrape_message(url)
+      p "Scraping: #{url}"
+    end
   end
 end
